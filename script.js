@@ -63,6 +63,30 @@ test("There is at least one image", () => {
 test("There are at least 500 words on the page", () => {
   expect(getWords.length).toBeGreaterThanOrEqual(500);
 });
+var numbers, item;
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+}
+
+
+numbers = [0, 0, 0, 0, 0];
+
+
+document.getElementById('add_number').addEventListener('click', (event) => {
+  let element_total = document.getElementById('total');
+  element_total.innerText = numbers.reduce((a,b) => a+b, 0);
+  numbers.push(getNumberOrString(document.getElementById('number').value));
+  numbers.shift().forEach((item) => {
+  });
+
+});
 
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
