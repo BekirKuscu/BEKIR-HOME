@@ -65,17 +65,6 @@ test("There are at least 500 words on the page", () => {
 });
 var numbers, item;
 
-function getNumberOrString(value) {
-  // Convert a string value to a number if possible
-  let number_value = Number(value);
-  if (Number.isNaN(number_value)) {
-    return value
-  } else {
-    return number_value
-  }
-}
-
-
 numbers = [0, 0, 0, 0, 0];
 
 
@@ -97,6 +86,16 @@ document.getElementById('add_number').addEventListener('click', (event) => {
 };
 
 });
+
+function getNumberOrString(value) {
+  // Convert a string value to a number if possible
+  let number_value = Number(value);
+  if (Number.isNaN(number_value)) {
+    return value
+  } else {
+    return number_value
+  }
+};
 
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
