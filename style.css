@@ -51,6 +51,9 @@ banner{
 }
 #title{
  text-align:center;
+  font-family: "verdana";
+  font-weight: bold;
+  font-size: 30px;
 }
 img-bekir {
   width:50%;
@@ -164,8 +167,8 @@ banner{
 #title{
  text-align:center;
 }
-img-bekir {
-  width:50%;
+#img-future {
+  width:35%;
 }
 
 
@@ -198,11 +201,22 @@ iframe{
   width:15%;
     height:25px;
   
+  
 }
 #c_comment{
   width:25%;
   height:70px;
 }
+
+#send {
+  padding:10px;
+  width:70px;
+  font-family: "verdana";
+  font-weight: bold;
+  }
+}
+
+  
 
 
 #reach-out ul{
