@@ -55,6 +55,7 @@ banner{
   font-weight: bold;
   font-size: 30px;
 }
+
 img-bekir {
   width:50%;
 }
@@ -197,6 +198,10 @@ iframe{
   /* autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen */
 }
 
+#comment_section {
+  background-color: white;
+}
+
 #c_name{
   width:15%;
     height:25px;
@@ -233,6 +238,15 @@ main {
   background-color:white;
 }
 
+#copyright {
+  width:100%;
+  height:55px;
+  font-family: georgia;
+  background-color:silver;
+  color:black;
+  font-size:17px;
+  text-align:left;
+}
 
 .footer{
   width:100%;
