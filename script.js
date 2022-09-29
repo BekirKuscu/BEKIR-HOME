@@ -81,11 +81,11 @@ function getNumberOrString(value) {
 
 
 
-document.getElementById('button').addEventListener('click', (event) => {
+document.getElementById('send').addEventListener('click', (event) => {
   let element_outputName = document.getElementById('outputName');
-  element_outputName.innerText = getNumberOrString(document.getElementById('inputName').value);
+  element_outputName.innerText = getNumberOrString(document.getElementById('c_name').value);
   let element_outputText = document.getElementById('outputText');
-  element_outputText.innerText = getNumberOrString(document.getElementById('inputComment').value);
+  element_outputText.innerText = getNumberOrString(document.getElementById('c_comment').value);
 
 });
 
