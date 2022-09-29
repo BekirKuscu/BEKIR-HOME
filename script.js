@@ -5,7 +5,10 @@
    ===================
 */
 
-const {
+
+
+
+  const {
   core: { test, expect, run },
   prettify
 } = window.jestLite;
@@ -25,6 +28,8 @@ const getHeader = document.querySelectorAll("header"),
   getIFrame = document.querySelectorAll("iframe"),
   getImage = document.querySelectorAll("img"),
   getWords = document.body.innerText;
+
+
 
 /* =================
    ASSERTIONS 
@@ -63,29 +68,6 @@ test("There is at least one image", () => {
 test("There are at least 500 words on the page", () => {
   expect(getWords.length).toBeGreaterThanOrEqual(500);
 });
-var numbers, item;
-
-numbers = [0, 0, 0, 0, 0];
-
-
-document.getElementById('add_number').addEventListener('click', (event) => {
-  let element_total = document.getElementById('total');
-  element_total.innerText = numbers.reduce((a,b) => a+b, 0);
-  numbers.push(getNumberOrString(document.getElementById('number').value));
-  numbers.shift().forEach((item) => {
-  });
-
-  function getNumberOrString(value) {
-  // Convert a string value to a number if possible
-  let number_value = Number(value);
-  if (Number.isNaN(number_value)) {
-    return value
-  } else {
-    return number_value
-  }
-};
-
-});
 
 function getNumberOrString(value) {
   // Convert a string value to a number if possible
@@ -95,7 +77,17 @@ function getNumberOrString(value) {
   } else {
     return number_value
   }
-};
+}
+
+
+
+document.getElementById('button').addEventListener('click', (event) => {
+  let element_outputName = document.getElementById('outputName');
+  element_outputName.innerText = getNumberOrString(document.getElementById('inputName').value);
+  let element_outputText = document.getElementById('outputText');
+  element_outputText.innerText = getNumberOrString(document.getElementById('inputComment').value);
+
+});
 
 const console = document.getElementById("tests");
 prettify.toHTML(run(), console);
