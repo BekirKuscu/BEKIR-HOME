@@ -82,9 +82,9 @@ function getNumberOrString(value) {
 
 
 document.getElementById('send').addEventListener('click', (event) => {
-  let element_outputName = document.getElementById('outputName');
+  let element_outputName = document.getElementById('NameReturn');
   element_outputName.innerText = getNumberOrString(document.getElementById('c_name').value);
-  let element_outputText = document.getElementById('outputText');
+  let element_outputText = document.getElementById('TextReturn');
   element_outputText.innerText = getNumberOrString(document.getElementById('c_comment').value);
 
 });
